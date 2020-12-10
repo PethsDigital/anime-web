@@ -1,0 +1,61 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.question{
+    width: 80%;
+    margin: auto;
+    margin-top: 100px;
+    margin-bottom: 20px;
+}
+
+.option{
+    padding: 10px;
+    width: 80%;
+    background-color: rgb(243, 134, 134);
+    margin: auto;
+    margin-bottom: 30px;
+}
+
+.correct{
+    background-color: rgb(143, 240, 143);
+}
+
+.but{
+    width: 60%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+}
+button{
+    padding: 7px 0;
+    width: 35%;
+    border: transparent;
+    border-radius: 5px;
+}
+button:focus{
+    outline: none;
+}
+.accept{
+    background: green;
+    color: white;
+}
+.reject{
+    background: red;
+    color: white;
+}
+
+@media(max-width:600px){
+    .but{
+        flex-direction: column;
+        width: 80%;
+    }
+    button{
+        width: 80%;
+        margin: auto;
+        display: block;
+        margin-bottom: 20px;
+    }
+}

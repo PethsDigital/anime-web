@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css" integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Playfair+Display&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="../assets/images/favicon.png" type="image/x-icon">
+    
+    <title>Excel Minds</title>
+    <link rel="stylesheet" href="styles/list.css">
+    <link rel="stylesheet" href="styles/admin.css">
+    <link rel="stylesheet" href="styles/select.css">
+    
+   
+    
+</head>
+<body>
+
+
+    <nav>
+
+        <div class="nav">
+
+            <div class="hamburger">
+                <div class="line1"></div>
+                <div class="line3"></div>
+            </div>
+            <div class="nav_container">
+               
+                <div class="butoons">
+                    <a href="">Log out</a>
+                </div>
+            
+    
+            </div>
+
+        </div>
+        
+        
+       
+    </nav>
+
+    <main>
+        <div class="nav_content">
+            
+
+            <div class="navigation">
+                <p class="navi"></p>
+
+
+                <div class="project srd ">
+                    <a href="questions.html" class="project">
+                        
+                        <p style="text-align: center;" class="txt">Question List</p>
+                    </a>
+                </div>
+
+                <div class="project srd active">
+                    <a href="flagged.html" class="project">
+                        
+                        <p class="txt">Flagged Questions</p>
+                    </a>
+                </div>
+
+                <!-- <div class="project srd">
+                    <a href="courselist.html" class="project">
+                        
+                        <p class="txt">Courses</p>
+                    </a>
+                </div>
+
+                <div class="project srd">
+                    <a href="resourcelist.html" class="project">
+                        
+                        <p class="txt">Resource Persons</p>
+                    </a>
+                </div> -->
+
+                
+
+                
+
+                
+
+
+            </div>
+
+          
+
+        </div>
+        
+        <section class="second">
+
+            <div class="containerover">
+                <div class="pagename">
+                    <p>Student List</p>
+                    <form class="formsearcho" action="">
+                        <input class="searf" type="text" name="searcherr" placeholder="Search">
+                        <input type="submit" hidden>
+                    </form>
+                </div>
+                <div class="overflowtable flipped"  >
+
+                    <table>
+                        <thead>
+
+                            <tr class="studhead">
+                                <th>Email</th>
+                                <th>Category</th>
+                                <th>Actions</th>
+                            </tr>
+
+                        </thead>
+                        
+                        <tbody>
+
+                            <tr class="studrow row1">
+                                <td class="studcourse">rajimustapha30@gmail.com</td>
+                                <td class="studcontact">Naruto</td>
+                                <td class="action"> <a href=""><button>View Details</button></a> </td>
+                                
+                            </tr> 
+        
+                            <tr class="studrow row1">
+                                <td class="studcourse">rajimustapha30@gmail.com</td>
+                                <td class="studcontact">Naruto</td>
+                                <td class="action"> <a href=""><button>View Details</button></a> </td>
+                                
+                            </tr>
+         
+        
+    
+                        
+
+                        </tbody>
+    
+                      
+    
+                        
+                    </table>
+
+                    
+
+                </div>
+
+               
+                   
+                    <select class="selector" name="page" id="page">
+                        <option value="null">select page</option>
+                        <option value="1"> page 1</option>
+                        <option value="2">page 2</option>
+                        <option value="3">page 3</option>
+                        <option value="4">page 4</option>
+                    </select>
+             
+                
+
+
+            </div>
+              
+        </section>
+
+
+        
+    </main>
+
+
+
+
+    <script src="scripts/nav.js"></script>  
+    <script src="scripts/search.js"></script>
+    <script src="scripts/list.js"></script>
+    
+</body>
+</html>

@@ -1,0 +1,60 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    /* background: url("../image/attack2.jpg"); */
+    background: #c0c2ce;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background: #fe667b;
+    display: grid;
+    place-items: center;
+    height: 100vh;
+  
+}
+
+form{
+    width: 50%;
+     background: #012f63;
+    color: #c0c2ce;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    margin-top: 30px;
+}
+input{
+    width: 100%;
+    margin-bottom: 20px;
+    padding: 20px;
+    background: #fe667b;
+    background: #c0c2ce;;
+   
+}
+input:focus{
+    outline: none;
+}
+button{
+    width: 200px;
+    cursor: pointer;
+    margin: auto;
+    padding: 10px;
+    border-radius: 5px;
+}
+button:focus{
+   outline: none;
+}
+
+
+@media(max-width:700px){
+    form{
+        width: 80%;
+    }
+}
+@media(max-width:500px){
+    body{
+        height: auto;
+    }
+}

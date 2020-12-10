@@ -1,0 +1,16 @@
+
+        
+     
+        select{
+            width: 200px;
+            display: block;
+            margin: auto;
+            margin-bottom: 20px;
+         padding: 8px;
+         box-sizing: border-box;
+         border-radius: 5px;
+         border: 2px solid #4E37B2;
+    }
+    select:focus{
+        outline: none;
+    }

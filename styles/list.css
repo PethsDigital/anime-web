@@ -172,10 +172,13 @@ section.second{
 }
 table{
   
-    width: 1000px;    
+    width: 900px;    
     margin: auto;
     margin-top: 30px;
     border-spacing:0 15px; 
+    
+    padding: 20px;
+    
     
  
 }
@@ -183,7 +186,12 @@ table{
     overflow-x: auto;
     width: 90%;
     margin: auto;
+    background: #FCFCFC;
     margin-top: 40px;
+    padding: 10px;
+    /* -webkit-box-shadow: 10px 10px 5px -8px rgba(0,0,0,0.75);
+    -moz-box-shadow: 10px 10px 5px -8px rgba(0,0,0,0.75);
+    box-shadow: 10px 10px 5px -8px rgba(0,0,0,0.75); */
 }
 .flipped, .flipped  table{ 
     transform: rotateX(180deg); 
@@ -215,7 +223,7 @@ table{
 
 }
 tr.studrow{
-    background: #FCFCFC;
+   
     
   
     font-size: 15px;
@@ -227,7 +235,7 @@ tr.studrow{
 
 
 td{
-    padding: 10px;
+    padding: 20px;
 }
 tr.studrow td.studname{
     
@@ -265,7 +273,8 @@ td{
     border: transparent;
     background: #4E37B2;
     color: white;
-    padding: 8px;
+    width: 130px;
+    padding: 8px 0;
     border-radius: 5px;
 }
 @media(max-width:1000px){
@@ -486,13 +495,13 @@ td{
         
         left: 0;
         height: 400px;
-        overflow-y: scroll;
+       
         z-index: 2;
         
         
     }
     
-    .nav_content::-webkit-scrollbar-track
+    /* .nav_content::-webkit-scrollbar-track
     {
         -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
         border-radius: 10px;
@@ -511,7 +520,7 @@ td{
         -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
         background-color: #4E37B2;
     
-    }
+    } */
 
     .nav_content{
         margin-right: 0;
@@ -639,22 +648,22 @@ td{
 
 /* SCROLL BAR */
 /* width */
-::-webkit-scrollbar {
+/* ::-webkit-scrollbar {
     width: 10px;
     margin: 10px;
-  }
+  } */
   
   /* Track */
-  ::-webkit-scrollbar-track {
+  /* ::-webkit-scrollbar-track {
     background: #f1f1f1; 
   }
-   
+    */
   /* Handle */
-  ::-webkit-scrollbar-thumb {
+  /* ::-webkit-scrollbar-thumb {
     background: #4E37B2; 
-  }
+  } */
   
   /* Handle on hover */
-  ::-webkit-scrollbar-thumb:hover {
+  /* ::-webkit-scrollbar-thumb:hover {
     background: #9180db; 
-  }
+  } */

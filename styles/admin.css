@@ -365,12 +365,12 @@ section.second{
         
         left: 0;
         height: 400px;
-        overflow-y: scroll;
+       
         z-index: 2;
         
         
     }
-    
+/*     
     .nav_content::-webkit-scrollbar-track
     {
         -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
@@ -390,7 +390,7 @@ section.second{
         -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
         background-color: #4E37B2;
     
-    }
+    } */
 
     .nav_content{
         margin-right: 0;

@@ -6,15 +6,28 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css" integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Playfair+Display&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
-    <link rel="shortcut icon" href="../assets/images/favicon.png" type="image/x-icon">
     
+    <link rel="shortcut icon" href="image/attack3.jpg" type="image/x-icon">
     <title>Anime</title>
     <link rel="stylesheet" href="styles/list.css">
     <link rel="stylesheet" href="styles/admin.css">
-    <link rel="stylesheet" href="styles/eachflag.css">
+    <link rel="stylesheet" href="styles/select.css">
+    <link rel="stylesheet" href="styles/login.css" />
     
-    
-   
+   <style>
+       .second{
+        display: grid;
+    height: 100%;
+    width: 100%;
+    place-items: center;
+    background: #f2f2f2;
+       }
+       @media (max-width: 400px) {
+           .wrapper{
+               width: 90%;
+           }
+       }
+   </style>
     
 </head>
 <body>
@@ -31,7 +44,7 @@
             <div class="nav_container">
                
                 <div class="butoons">
-                    <a href="index.html">Log out</a>
+                    <a href="">Log out</a>
                 </div>
             
     
@@ -58,23 +71,20 @@
                     </a>
                 </div>
 
-                <div class="project srd active">
+                <div class="project srd">
                     <a href="flagged.html" class="project">
                         
                         <p class="txt">Flagged Questions</p>
                     </a>
                 </div>
 
-                <div class="project srd">
+                <div class="project srd active">
                     <a href="addadmin.html" class="project">
                         
                         <p class="txt">Add Admin</p>
                     </a>
                 </div>
 
-                
-
-                
 
                 
 
@@ -86,27 +96,24 @@
         </div>
         
         <section class="second">
-            
-            <div class="question">
-                <p>Who killed Naruto's father</p>
-            </div>
-            <div class="option correct">
-                <p>Naruto</p>
-            </div>
-            <div class="option">
-               <p>Sasuke</p>
-            </div>
-            <div class="option">
-               <p>Obuki</p>
-            </div>
-            <div class="option">
-                <p>Fox</p>
-            </div>
 
-            <div class="but">
-                <button class="accept">Edit</button>
-                <button class="reject">Delete</button>
-                <button class="accept">Unflag</button>
+            <div class="wrapper">
+                <div class="title">Add Admin</div>
+                <form action="#">
+                  <div class="field">
+                    <input type="text" required />
+                    <label>Email Address</label>
+                  </div>
+                  <div class="field">
+                    <input type="password" required />
+                    <label>Password</label>
+                  </div>
+                  
+                  <div class="field">
+                    <input type="submit" value="Login" />
+                  </div>
+               
+                </form>
             </div>
               
         </section>
@@ -118,8 +125,9 @@
 
 
 
-    <script src="nav.js"></script>  
-    
+    <script src="scripts/nav.js"></script>  
+    <script src="scripts/search.js"></script>
+    <script src="scripts/list.js"></script>
     
 </body>
 </html>

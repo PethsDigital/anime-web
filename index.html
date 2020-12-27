@@ -18,21 +18,25 @@
       <div class="title">Login Form</div>
       <form action="#">
         <div class="field">
-          <input type="text" required />
+          <input id="email" type="text" required />
           <label>Email Address</label>
         </div>
         <div class="field">
-          <input type="password" required />
+          <input id="pwd" type="password" required />
           <label>Password</label>
         </div>
         <div class="content">
           <p><a href="forgetpassword.html">Forgot Password?</a></p>
         </div>
+        <p class="success"></p>
         <div class="field">
-          <input type="submit" value="Login" />
+          <input type="submit" id="subit" value="Login" />
         </div>
      
       </form>
     </div>
+
+    <script src="scripts/auth.js"></script>
+    
   </body>
 </html>

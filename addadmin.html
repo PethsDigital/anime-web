@@ -99,18 +99,27 @@
 
             <div class="wrapper">
                 <div class="title">Add Admin</div>
-                <form action="#">
+                <form id="addForm" action="#">
+
                   <div class="field">
-                    <input type="text" required />
+                    <input name="email" type="text" required />
                     <label>Email Address</label>
                   </div>
+
+
                   <div class="field">
-                    <input type="password" required />
+                    <input name="username" type="text" required />
+                    <label>Username</label>
+                  </div>
+
+
+                  <div class="field">
+                    <input name="password" type="password" required />
                     <label>Password</label>
                   </div>
                   
                   <div class="field">
-                    <input type="submit" value="Login" />
+                    <input id="subit" type="submit" value="Login" />
                   </div>
                
                 </form>
@@ -125,9 +134,9 @@
 
 
 
-    <script src="scripts/nav.js"></script>  
-    <script src="scripts/search.js"></script>
-    <script src="scripts/list.js"></script>
+    <script src="scripts/nav.js"></script> 
+    <script src="scripts/token.js"></script>
+    <script src="scripts/createAdmin.js"></script>
     
 </body>
 </html>

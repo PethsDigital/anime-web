@@ -44,7 +44,7 @@ selectTwo.addEventListener('change',()=>{
       redirect: 'follow'
     };
     
-    fetch(`https://kuizuapp.herokuapp.com/v1/questions/anime/${ID}`, requestOptions)
+    fetch(`https://kuizuapp.herokuapp.com/v1/flagged/page/${ID}`, requestOptions)
       .then(response => response.json())
       .then(result => {
         console.log(result)
@@ -52,7 +52,7 @@ selectTwo.addEventListener('change',()=>{
           loadempty()
         }
         else{
-          loader(result.data)
+          loader(result)
         }
      
      
@@ -61,7 +61,7 @@ selectTwo.addEventListener('change',()=>{
   
       const loader=(data) =>{
         tbody.innerHTML = "";
-          let eachdata = data
+          let eachdata = data.data.questions
         
           
           for (let i = 0; i < eachdata.length; i++) {

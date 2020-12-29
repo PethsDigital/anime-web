@@ -9,10 +9,13 @@ form.addEventListener('submit', (e)=>{
    
     const  raw = {
         "email": form.email.value,
+        "otp": parseInt( form.otp.value),
+        "password":form.password.value
         
     }
+    console.log(raw)
     var requestOptions = {
-      method: 'POST',
+      method: 'PUT',
       body: JSON.stringify(raw),
       headers: {
         'Content-Type': 'application/json',
@@ -20,7 +23,7 @@ form.addEventListener('submit', (e)=>{
       redirect: 'follow'
     };
     
-    fetch("https://kuizuapp.herokuapp.com/v1/users/sendOtp", requestOptions)
+    fetch("https://kuizuapp.herokuapp.com/v1/users/changePassword", requestOptions)
         .then(response => {
          console.log(response) 
          return response.json()
@@ -28,8 +31,8 @@ form.addEventListener('submit', (e)=>{
         .then((data) => {
           console.log(data)
           if (data.success) {
-            document.getElementById('subit').value='OTP sent'
-            window.location.href="forgetpasswordotp.html"
+            document.getElementById('subit').value="Reset Successful"
+            // window.location.href="forgetpasswordfinal.html"
           }
           else{
             suc.style.color='red'
@@ -37,10 +40,22 @@ form.addEventListener('submit', (e)=>{
             suc.style.margin="10px 0"
             suc.textContent= data.message
           }
-       
+          
+            // suc.style.color='green'
+            // suc.style.textAlign = 'center'
+            // suc.textContent= 'Authentication Successful '
+            // window.localStorage.setItem("token",data.data.token);
             
-           
- 
+            // window.location.href="forgetpasswordotp.html"
+          
+        //   else{
+        //     suc.style.color='red'
+        //     suc.textContent=data.response + " " + 'try again'
+        //     document.getElementById('subit').disabled = false;
+
+        //     document.getElementById('subit').textContent='Next'
+            
+        //   }
 
           
           

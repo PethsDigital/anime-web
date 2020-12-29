@@ -3,7 +3,11 @@ const login = document.querySelector('form');
 let email = document.querySelector('#email');
 let pwd = document.querySelector('#pwd');
 let suc = document.querySelector('.success')
-
+const myFunction=()=> {
+  setTimeout(()=>{
+    location.reload()
+  }, 3000);
+}
 login.addEventListener('submit', (e)=>{
 
     e.preventDefault()
@@ -34,13 +38,26 @@ login.addEventListener('submit', (e)=>{
         })
         .then((data) => {
           
-           
+           console.log(data)
+           if (data.success) {
             suc.style.color='green'
             suc.style.textAlign = 'center'
+            suc.style.margin="10px 0"
             suc.textContent= 'Authentication Successful '
             window.localStorage.setItem("token",data.data.token);
-            
+            document.getElementById('subit').disabled = false;
             window.location.href="questions.html"
+           }
+           else{
+            suc.style.color='red'
+            suc.style.textAlign = 'center'
+            suc.style.margin="10px 0"
+            suc.textContent= data.message
+            myFunction()
+
+            document.getElementById('subit').disabled = false;
+           }
+           
           
         //   else{
         //     suc.style.color='red'

@@ -1,6 +1,6 @@
 
 let form = document.querySelector('#addForm')
-
+let suc = document.querySelector('.success')
 form.addEventListener('submit', (e)=>{
 
     e.preventDefault()
@@ -30,10 +30,20 @@ form.addEventListener('submit', (e)=>{
          return response.json()
         })
         .then((data) => {
-          console.log(data)
-          subit.value = 'Added successfully'
-          subit.disabled = false;
-          myFunction()
+          
+
+          if (data.success) {
+            console.log(data)
+            subit.value = 'Added successfully'
+            subit.disabled = false;
+            myFunction()
+           }
+           else{
+            suc.style.color='red'
+            suc.style.textAlign = 'center'
+            suc.style.margin="10px 0"
+            suc.textContent= data.message
+           }
           
         } )
         .catch(error => console.log('error', error));

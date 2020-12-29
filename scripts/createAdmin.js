@@ -1,5 +1,5 @@
 let form = document.querySelector('#addForm')
-
+let suc = document.querySelector('.success')
 // submit form
 
 form.addEventListener('submit', (e)=>{
@@ -37,12 +37,24 @@ form.addEventListener('submit', (e)=>{
         })
         .then((data) => {
           
-          
-          document.getElementById('subit').disabled = false;
+          if (data.success) {
+            document.getElementById('subit').disabled = false;
 
-          document.getElementById('subit').textContent='done'
-         
-          myFunction()
+            document.getElementById('subit').textContent='done'
+
+
+           
+            myFunction()
+          }
+          else{
+            suc.style.color='red'
+            suc.style.textAlign = 'center'
+            suc.style.margin="10px 0"
+            suc.textContent= data.message
+            myFunction()
+          }
+          
+        
           
           
         } )

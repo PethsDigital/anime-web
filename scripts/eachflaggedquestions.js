@@ -70,12 +70,12 @@ accept.addEventListener('click',()=>{
     redirect: 'follow'
   };
   
-  fetch(`https://kuizuapp.herokuapp.com/v1/questions/approve/${product}`, requestOptions)
+  fetch(`https://kuizuapp.herokuapp.com/v1/questions/unflag/${product}`, requestOptions)
     .then(response => response.json())
     .then(result => {
       console.log(result)
       // loader(result)
-      accept.textContent = 'Question Accepted'
+      accept.textContent = 'Question unflagged'
     })
     .catch(error => console.log('error', error));
 })

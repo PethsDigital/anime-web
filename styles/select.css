@@ -32,3 +32,6 @@
     select:focus{
         outline: none;
     }
+    select.searf{
+        width: 150px;
+    }

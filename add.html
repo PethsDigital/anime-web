@@ -14,18 +14,26 @@
 			<div class="left"></div>
 			<div class="right">
 				<h2>Add Question</h2>
-				<textarea placeholder="Question" class="field"></textarea>
-				<input type="text" class="field" placeholder="Category">
-				<input type="text" class="field" placeholder="Correct Option">
-				<input type="text" class="field" placeholder="Incorrect Option">
-				<input type="text" class="field" placeholder="Incorrect Option">
-				<input type="text" class="field" placeholder="Incorrect Option">
+				<form action="">
+					<textarea placeholder="Question" name="question" class="field"></textarea>
+		
+					<select required name="cate" class="field" id="">
+						<option value="">Select Category</option>
+					</select>
+					<input name="correct" type="text" required class="field" placeholder="Correct Option">
+					<input name="incorrect1" type="text" required class="field" placeholder="Incorrect Option">
+					<input name="incorrect2" type="text" required class="field" placeholder="Incorrect Option">
+					<input name="incorrect3" type="text" required class="field" placeholder="Incorrect Option">
+					
+					<button type="submit" class="btn">Send</button>
+
+				</form>
 				
-				<button class="btn">Send</button>
 			</div>
 		</div>
 	</div>
-	<script src="scripts/token.js"></script>
+	<script src="scripts/addquestion.js"></script>
+
     
 </body>
 </html>

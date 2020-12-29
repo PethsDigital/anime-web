@@ -4,9 +4,24 @@ let limit = 2
 select.addEventListener('change',()=>{
   console.log(select.value)
   page = select.value
-  let tbody = document.querySelector('tbody')
+  loaderprofile(page)
+})
+
+let fillselect = (page)=>{
   
-  const loaderprofile = ()=>{
+  select.innerHTML = ''
+  for (let i = 0; i < page; i++) {
+    const opt = document.createElement( "option" );
+    opt.textContent = i+1;
+    opt.value = i+1;
+    select.append(opt)
+    
+  }
+  console.log(select)
+}
+
+  let tbody = document.querySelector('tbody')
+  const loaderprofile = (page)=>{
 
     var requestOptions = {
       method: 'GET',
@@ -17,7 +32,7 @@ select.addEventListener('change',()=>{
       redirect: 'follow'
     };
     
-    fetch(`https://excelminds.herokuapp.com/api/v1/student?page=${page}&limit=${limit}`, requestOptions)
+    fetch(`https://kuizuapp.herokuapp.com/v1/questions/flagged/page/${page}`, requestOptions)
       .then(response => response.json())
       .then(result => {
         console.log(result)
@@ -28,19 +43,19 @@ select.addEventListener('change',()=>{
   
     const loader=(data) =>{
       console.log(data)
+      fillselect(data.data.noofPages)
       tbody.innerHTML = "";
-        let eachdata = data.result.results
+        let eachdata = data.data.questions
         console.log(eachdata)
         
         for (let i = 0; i < eachdata.length; i++) {
 
            let tr = `
            <tr class="studrow row1">
-                <td class="studname"> <div class="vb"><img class="studimg" src=${eachdata[i].profile_picture} alt=""> <p class="studentname">${eachdata[i].firstname} ${eachdata[i].lastname}</p></div> </td>
-                <td class="studcontact">${eachdata[i].phone}</td>
-                <td class="studcourse">English Language</td>
-                <td class="studmail">${eachdata[i].email}</td>
-                <td class="action"> <a href=student-details.html?studentid=${eachdata[i]._id}><button>View Details</button></a> </td>
+                <td class="studname">${i+1}</td>
+                <td class="studcontact">${eachdata[i].question}</td>
+                <td class="studmail">${eachdata[i].anime_name}</td>
+                <td class="action"> <a href=eachflag.html?questionid=${eachdata[i]._id}><button>View Details</button></a> </td>
            
            </tr>
            `
@@ -56,9 +71,9 @@ select.addEventListener('change',()=>{
 }
 
 
-loaderprofile()
+loaderprofile(page)
 
-})
+
 
 
 

@@ -14,14 +14,14 @@
     <link rel="stylesheet" href="styles/select.css">
     <link rel="stylesheet" href="styles/login.css" />
     <link rel="stylesheet" href="styles/loader.css">
-    
    <style>
+      
        .second{
         display: grid;
-    height: 100%;
-    width: 100%;
-    place-items: center;
-    background: #f2f2f2;
+        height: 100%;
+        width: 100%;
+        place-items: center;
+        background: #f2f2f2;
        }
        @media (max-width: 400px) {
            .wrapper{
@@ -36,8 +36,7 @@
     <div class="spinner">
         <div></div>
         <div></div>
-    </div>
-
+    </div> 
 
     <nav>
 
@@ -84,14 +83,14 @@
                     </a>
                 </div>
 
-                <div class="project srd active">
+                <div class="project srd">
                     <a href="addadmin.html" class="project">
                         
                         <p class="txt">Add Admin</p>
                     </a>
                 </div>
 
-                <div class="project srd">
+                <div class="project srd active">
                     <a href="addAnime.html" class="project">
                         
                         <p class="txt">Add Anime</p>
@@ -110,29 +109,17 @@
         
         <section class="second">
 
-            <div class="wrapper">
-                <div class="title">Add Admin</div>
+            <div style="margin-top: 60px;" class="wrapper">
+             
                 <form id="addForm" action="#">
 
                   <div class="field">
-                    <input name="email" type="text" required />
-                    <label>Email Address</label>
-                  </div>
-
-
-                  <div class="field">
-                    <input name="username" type="text" required />
-                    <label>Username</label>
-                  </div>
-
-
-                  <div class="field">
-                    <input name="password" type="password" required />
-                    <label>Password</label>
+                    <input name="anime" type="text" required />
+                    <label>Anime Name</label>
                   </div>
                   
                   <div class="field">
-                    <input id="subit" type="submit" value="Add" />
+                    <input id="subit" class="subit" type="submit" value="Add" />
                   </div>
                
                 </form>
@@ -149,7 +136,7 @@
 
     <script src="scripts/nav.js"></script> 
     <script src="scripts/token.js"></script>
-    <script src="scripts/createAdmin.js"></script>
+    <script src="scripts/addanime.js"></script>
     <script src="scripts/loader.js"></script>
     
 </body>

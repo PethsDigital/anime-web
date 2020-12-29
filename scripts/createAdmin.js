@@ -42,12 +42,17 @@ form.addEventListener('submit', (e)=>{
 
           document.getElementById('subit').textContent='done'
          
+          myFunction()
           
           
         } )
         .catch(error => console.log('error', error));
   
-
+        const myFunction=()=> {
+          setTimeout(()=>{
+            location.reload()
+          }, 3000);
+        }
 })
 
 

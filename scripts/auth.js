@@ -15,14 +15,14 @@ login.addEventListener('submit', (e)=>{
         "username": email.value,
         "password" : pwd.value  
     }
-    var toks = "Bearer " + window.localStorage.getItem("token")
+    var toks = window.localStorage.getItem("token")
     var requestOptions = {
       method: 'POST',
       body: JSON.stringify(raw),
       // you did not add the header content-type that was why it wasnt working.
       headers: {
         'Content-Type': 'application/json',
-        'Authorization':toks,
+        'authorization':toks,
     },
       redirect: 'follow'
     };

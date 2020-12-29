@@ -11,10 +11,13 @@
     <link rel="stylesheet" href="styles/list.css">
     <link rel="stylesheet" href="styles/admin.css">
     <link rel="stylesheet" href="styles/select.css">
-    
+    <link rel="stylesheet" href="styles/loader.css">
 </head>
 <body>
-
+    <div class="spinner">
+        <div></div>
+        <div></div>
+    </div> 
     <nav>
 
         <div class="nav">
@@ -67,6 +70,13 @@
                     </a>
                 </div>
 
+                <div class="project srd">
+                    <a href="addAnime.html" class="project">
+                        
+                        <p class="txt">Add Anime</p>
+                    </a>
+                </div>
+
                 
 
                 
@@ -86,7 +96,10 @@
                 <div class="pagename">
                     <p>Question List</p>
                     <form class="formsearcho" action="">
-                        <input class="searf" type="text" name="searcherr" placeholder="Search">
+                        
+                        <select class="searf" type="text" name="searcherr" placeholder="Search">
+                            <option value="">Select Category</option>
+                        </select>
                         <input type="submit" hidden>
                     </form>
                 </div>
@@ -106,21 +119,7 @@
                         
                         <tbody>
 
-                            <tr class="studrow row1">
-                                <td>1</td>
-                                <td class="studcourse">Who killed naruto's father and mother and sister Who killed naruto's father and mother and sister</td>
-                                <td class="studcontact">Naruto</td>
-                                <td class="action"> <a href=""><button>View Details</button></a> </td>
-                                
-                            </tr> 
-        
-                            <tr class="studrow row1">
-                                <td>2</td>
-                                <td class="studcourse">Who killed naruto's father and mother and sister Who killed naruto's father and mother and sister</td>
-                                <td class="studcontact">Naruto</td>
-                                <td class="action"> <a href=""><button>View Details</button></a> </td>
-                                
-                            </tr>
+                         
          
         
     
@@ -166,10 +165,10 @@
 
 
     <script src="scripts/nav.js"></script>  
-    <script src="scripts/search.js"></script>
-    <script src="scripts/list.js"></script>
     <script src="scripts/token.js"></script>
-    
+    <script src="scripts/search.js"></script>
+    <script src="scripts/questionlist.js"></script>
+    <script src="scripts/loader.js"></script>
     
 </body>
 </html>

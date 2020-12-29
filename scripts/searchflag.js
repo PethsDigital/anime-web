@@ -44,24 +44,27 @@ selectTwo.addEventListener('change',()=>{
       redirect: 'follow'
     };
     
-    fetch(`https://kuizuapp.herokuapp.com/v1/flagged/page/${ID}`, requestOptions)
+    fetch(`https://kuizuapp.herokuapp.com/v1/questions/flagged/${ID}`, requestOptions)
       .then(response => response.json())
       .then(result => {
         console.log(result)
-        if (result.data==null) {
+        if (result.data.length==0) {
+          
           loadempty()
         }
         else{
-          loader(result)
+         
+          loader(result.data)
         }
      
      
       })
       .catch(error => console.log('error', error));
-  
+      
       const loader=(data) =>{
+     
         tbody.innerHTML = "";
-          let eachdata = data.data.questions
+          let eachdata = data
         
           
           for (let i = 0; i < eachdata.length; i++) {

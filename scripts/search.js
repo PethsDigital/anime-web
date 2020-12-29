@@ -48,7 +48,7 @@ selectTwo.addEventListener('change',()=>{
       .then(response => response.json())
       .then(result => {
         console.log(result)
-        if (result.data==null) {
+        if (result.data.length==0) {
           loadempty()
         }
         else{

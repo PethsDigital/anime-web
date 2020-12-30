@@ -71,7 +71,7 @@ form.addEventListener('submit',(e)=>{
     const myFunction=()=> {
       setTimeout(()=>{
         location.reload()
-      }, 3000);
+      }, 2000);
   }
 
 })

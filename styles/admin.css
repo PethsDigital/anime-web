@@ -35,7 +35,10 @@ nav{
     justify-content: space-between;
     
 }
-
+.nav_container img{
+    width: 50px;
+    transform: translateY(-1px);
+}
 .logo{
     width: 38%;
 }

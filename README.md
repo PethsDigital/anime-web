@@ -1,5 +1,5 @@
 # anime-web
 
-http://animeweb.netlify.app/
+https://kuizu.netlify.app/
 
 https://kuizuapp.herokuapp.com/v1/docs

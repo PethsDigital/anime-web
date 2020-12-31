@@ -13,7 +13,7 @@ form.addEventListener('submit', (e)=>{
     e.preventDefault()
     let subit = document.querySelector('.subit')
     subit.disabled = true;
-    subit.value= 'Adding....'
+    subit.value= 'Editing....'
     let link1,link2;
     let image = document.getElementById('imaga')
     let image2 = document.getElementById('imaga2')
@@ -88,7 +88,7 @@ form.addEventListener('submit', (e)=>{
 
           if (data.success) {
             console.log(data)
-            subit.value = 'Edited successfully'
+            subit.value = 'Successful'
             subit.disabled = false;
             myFunction()
            }

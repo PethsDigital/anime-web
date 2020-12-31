@@ -23,10 +23,14 @@ let deleteAnime=(id)=>{
         let loader=(data)=>{
             console.log(data)
             
-            // myFunction()
-            loaderprofile(page)
+            myFunction()
+        
         } 
-   
+        const myFunction=()=> {
+            setTimeout(()=>{
+              location.reload()
+            }, 3000);
+        }  
 }
 
 select.addEventListener('change',()=>{

@@ -33,7 +33,7 @@ nav{
     margin: auto;
     display: flex;
     justify-content: space-between;
-    
+   
 }
 .nav_container img{
     width: 50px;
@@ -51,6 +51,7 @@ nav{
     width: 100%;
     display: flex;
     justify-content: flex-end;
+    cursor: pointer;
 
 }
 

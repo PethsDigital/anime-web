@@ -22,7 +22,9 @@
 .correct{
     background-color: rgb(143, 240, 143);
 }
-
+.edit{
+    background-color: rgb(240, 240, 135);
+}
 .but{
     width: 60%;
     margin: auto;
@@ -31,7 +33,7 @@
 }
 button{
     padding: 7px 0;
-    width: 35%;
+    width: 30%;
     border: transparent;
     border-radius: 5px;
 }
@@ -57,5 +59,6 @@ button:focus{
         margin: auto;
         display: block;
         margin-bottom: 20px;
+        
     }
 }

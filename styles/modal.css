@@ -1,0 +1,127 @@
+
+/* MODAL */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  }
+  
+  .modal-content {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 20px;
+    border-radius: 5px;
+    width: 30%;
+  }
+  
+  .close {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+  }
+ 
+  .modal-content form{
+      width: 90%;
+      margin: auto;
+  }
+
+  .modal-content input{
+      background-color: #e5e5e5;
+      margin-bottom: 20px;
+   
+      width: 100%;
+      outline: none;
+      border: transparent;
+
+      box-sizing: border-box;
+      padding: 10px;
+  }
+  .modal-content textarea{
+    background-color: #e5e5e5;
+    /* margin-top: 10px; */
+    margin-bottom: 20px;
+
+    width: 100%;
+    box-sizing: border-box;
+    border: transparent;
+    outline: none;
+    padding: 10px;
+}
+  .modal-content input::placeholder{
+      color: #BDBDBD;
+  }
+  .modal-content textarea::placeholder{
+    color: #BDBDBD;
+    font-size: 12px;
+    }
+  .modal-content p{
+      font-size: 13px;
+      margin-top: 10px;
+      margin-bottom: 10px;
+  }
+  .modal-content select{
+      margin-bottom: 10px;
+      width: 100%;
+      box-sizing: border-box;
+      padding: 8px 20px;
+      background-color: #e5e5e5;
+      border: none;
+      outline: none;
+  }
+
+  .modal-content button{
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    background-color: #4E37B2; 
+    color: white;
+  }
+
+
+
+  /* MEDIA QUERIES */
+@media screen and (max-width: 600px){
+    .content .right{
+        float: none;
+    }
+    .content .btn{
+        margin-bottom: 20px;
+        margin-top: 20px;
+    }
+    .content input{
+        width: 80%;
+    }
+    .content .class li{
+        display: block;
+        margin-bottom: 5px;
+    }
+    .modal-content {
+        width: 90% !important;
+      }
+}
+@media screen and (max-width: 1000px){
+    .modal-content {
+        width: 60%;
+      }
+}
+@media screen and (max-width: 1200px){
+    .modal-content {
+        width: 50%;
+      }
+}

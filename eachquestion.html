@@ -15,7 +15,7 @@
     <link rel="stylesheet" href="styles/list.css">
     <link rel="stylesheet" href="styles/admin.css">
     <link rel="stylesheet" href="styles/eachquestion.css">
-    
+    <link rel="stylesheet" href="styles/modal.css">
     <link rel="stylesheet" href="styles/loader.css">
    
     
@@ -125,20 +125,75 @@
 
             <div class="but">
                 <button class="accept">Accept</button>
+                <button class="edit" id="myBtn">Edit</button>
                 <button class="reject">Delete</button>
             </div>
               
         </section>
+
+        <div id="myModal" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <p><b>Edit</b></p>
+                <form class="createvirtual" action="">
+                    <!-- <input type="text" name="title" placeholder="Enter a title for your class"> -->
+                    <textarea required name="question" id="" cols="40" rows="5" placeholder="Enter Question"></textarea>
+                    <br>
+                    <select name="cate" class="loadSelect" required id="">
+                        <option value="">Select Category</option>
+                    </select>
+                    <br>
+                    <input type="text" required placeholder="Correct Option" name="correct" id="">
+                    <br>
+                    <input type="text" required placeholder="Incorrect Option" name="Incorrect1" id="">
+                    <br>
+                    <input type="text" required placeholder="Incorrect Option" name="Incorrect2" id="">
+                    <br>
+                    <input type="text" required placeholder="Incorrect Option" name="Incorrect3" id="">
+                    <br>
+                    <button id="subit" class="btn  btn-responsive purple">Edit</button>
+                </form>
+            </div>
+         </div>
 
 
         
     </main>
 
 
+    <script>
+        // Get the modal
+        var modal = document.getElementById("myModal");
+        
+        // Get the button that opens the modal
+        var btn = document.getElementById("myBtn");
+        
+        // Get the <span> element that closes the modal
+        var span = document.getElementsByClassName("close")[0];
+        
+        // When the user clicks the button, open the modal 
+        btn.onclick = function() {
+          modal.style.display = "block";
+        }
+        
+        // When the user clicks on <span> (x), close the modal
+        span.onclick = function() {
+          modal.style.display = "none";
+        }
+        
+        // When the user clicks anywhere outside of the modal, close it
+        window.onclick = function(event) {
+          if (event.target == modal) {
+            modal.style.display = "none";
+          }
+        }
+    </script>
+
 
     <script src="nav.js"></script>  
     <script src="scripts/token.js"></script>
     <script src="scripts/eachquestions.js"></script>
+    <script src="scripts/editModal.js"></script>
     <script src="scripts/loader.js"></script>
     <script src="scripts/cleartoken.js"></script>
     

@@ -5,6 +5,7 @@
   body {
 
    display: grid;
+   height: 100vh;
    place-items: center;
   
   }
@@ -13,9 +14,9 @@
   .spinner {
     width: 100px;
     height: 100px;
-    margin-top: 80px;
     position: relative;
   }
+
   .spinner div {
     box-sizing: border-box;
     position: absolute;

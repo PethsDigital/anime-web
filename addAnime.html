@@ -87,12 +87,19 @@
                 </div>
 
                 <div class="project srd">
+                    <a href="animeList.html" class="project">
+                        
+                        <p class="txt">Anime List</p>
+                    </a>
+                </div>
+
+                <div class="project srd">
                     <a href="addadmin.html" class="project">
                         
                         <p class="txt">Add Admin</p>
                     </a>
                 </div>
-                <p class="success"></p>
+               
                 <div class="project srd active">
                     <a href="addAnime.html" class="project">
                         
@@ -116,11 +123,22 @@
              
                 <form id="addForm" action="#">
 
-                  <div class="field">
-                    <input name="anime" type="text" required />
+                  <div class="field2">
                     <label>Anime Name</label>
+                    <input name="anime" type="text" required />
+                 
                   </div>
-                  
+                  <div class="field2">
+                    <label>Background Image</label>
+                    <input id="imaga" name="" type="file" required />
+                   
+                  </div>
+                  <div class="field2">
+                    <label>Cover photo</label>
+                    <input id="imaga2" name="" type="file" required />
+        
+                  </div>
+                  <p class="success"></p>
                   <div class="field">
                     <input id="subit" class="subit" type="submit" value="Add" />
                   </div>

@@ -9,25 +9,21 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css" integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Playfair+Display&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
-    <link rel="shortcut icon" href="../assets/images/favicon.png" type="image/x-icon">
-    
+    <link rel="shortcut icon" href="image/attack3.jpg" type="image/x-icon">
     <title>Anime</title>
     <link rel="stylesheet" href="styles/list.css">
     <link rel="stylesheet" href="styles/admin.css">
-    <link rel="stylesheet" href="styles/eachflag.css">
+    <link rel="stylesheet" href="styles/select.css">
     <link rel="stylesheet" href="styles/loader.css">
-    
-   
-    
 </head>
 <body>
-
-    <div class="spinner">
-        <div></div>
-        <div></div>
+    <div class="spinnerContainer">
+        <div class="spinner">
+            <div></div>
+            <div></div>
+        </div> 
     </div>
-
-
+    
     <nav>
 
         <div class="nav">
@@ -59,21 +55,21 @@
                 <p class="navi"></p>
 
 
-                <div class="project srd ">
+                <div class="project srd">
                     <a href="questions.html" class="project">
                         
                         <p style="text-align: center;" class="txt">Question List</p>
                     </a>
                 </div>
 
-                <div class="project srd active">
+                <div class="project srd">
                     <a href="flagged.html" class="project">
                         
                         <p class="txt">Flagged Questions</p>
                     </a>
                 </div>
 
-                <div class="project srd">
+                <div class="project srd active">
                     <a href="animeList.html" class="project">
                         
                         <p class="txt">Anime List</p>
@@ -108,26 +104,67 @@
         </div>
         
         <section class="second">
-            
-            <div class="question">
-                <p>Who killed Naruto's father</p>
-            </div>
-            <div class="option incorrect1 opt">
-                <p>Naruto</p>
-            </div>
-            <div class="option incorrect2 opt">
-               <p>Sasuke</p>
-            </div>
-            <div class="option incorrect3 opt">
-               <p>Obuki</p>
-            </div>
-            <div class="option incorrect4 opt">
-                <p>Fox</p>
-            </div>
 
-            <div class="but">
-                <button class="accept">Unflag</button>
-                <button class="reject">Delete</button>
+            <div class="containerover">
+                <div class="pagename">
+                    <p>Question List</p>
+                    <form class="formsearcho" action="">
+                        
+                        <select class="searf" type="text" name="searcherr" placeholder="Search">
+                            <option value="">Select Category</option>
+                        </select>
+                        <input type="submit" hidden>
+                    </form>
+                </div>
+                <div class="overflowtable flipped"  >
+
+                    <table>
+                        <thead>
+
+                            <tr class="studhead">
+                                <th>S/N</th>
+                                <th>Anime</th>
+                                <th>Question Amount</th>
+                                <th>Edit</th>
+                                <th>Delete</th>
+                            </tr>
+
+                        </thead>
+                        
+                        <tbody>
+
+                         
+         
+        
+    
+                        
+
+                        </tbody>
+    
+                      
+    
+                        
+                    </table>
+
+                    
+
+                </div>
+
+               
+                <div class="percen">
+                    <div class="flez">
+                        <p class="sel">Select Page</p>
+                        <select class="selector" name="page" id="page">
+                           
+                    
+                        </select>
+
+                    </div>
+                    
+                </div>
+                
+
+
             </div>
               
         </section>
@@ -138,10 +175,10 @@
 
 
 
-
-    <script src="nav.js"></script>  
+    <script src="scripts/nav.js"></script>  
     <script src="scripts/token.js"></script>
-    <script src="scripts/eachflaggedquestions.js" ></script>
+    <script src="scripts/searchAnime.js"></script>
+    <script src="scripts/animeList.js"></script>
     <script src="scripts/loader.js"></script>
     <script src="scripts/cleartoken.js"></script>
     

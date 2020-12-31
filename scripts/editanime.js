@@ -1,3 +1,9 @@
+const queryString = window.location.search;
+const urlParams = new URLSearchParams(queryString)
+const product = urlParams.get('questionid')
+
+
+
 const url = "https://api.cloudinary.com/v1_1/pethsdigital/image/upload";
 var cloudpreset = 'hoolpcjw'
 
@@ -62,7 +68,7 @@ form.addEventListener('submit', (e)=>{
     }
     console.log(JSON.stringify(raw))
     var requestOptions = {
-      method: 'POST',
+      method: 'PUT',
       body: JSON.stringify(raw),
       headers: {
         'Content-Type': 'application/json',
@@ -72,7 +78,7 @@ form.addEventListener('submit', (e)=>{
       redirect: 'follow'
     };
     
-    fetch("https://kuizuapp.herokuapp.com/v1/animes/add", requestOptions)
+    fetch(`https://kuizuapp.herokuapp.com/v1/animes/edit/${product}/`, requestOptions)
         .then(response => {
          console.log(response) 
          return response.json()
@@ -82,7 +88,7 @@ form.addEventListener('submit', (e)=>{
 
           if (data.success) {
             console.log(data)
-            subit.value = 'Added successfully'
+            subit.value = 'Edited successfully'
             subit.disabled = false;
             myFunction()
            }

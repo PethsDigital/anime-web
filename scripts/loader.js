@@ -1,4 +1,4 @@
-
+let body= document.querySelector('body')
 var myVar;
 let spin = document.querySelector(".spinner")
 let navo =document.querySelector("nav")
@@ -8,6 +8,8 @@ function myFunction() {
 }
 
 function showPage() {
+
+  body.style.height='auto';
   spin.style.display = "none";
   navo.style.display = "block";
   main.style.display = 'flex'

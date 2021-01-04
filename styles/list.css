@@ -171,16 +171,11 @@ section.second{
      color: rgba(0, 0, 0, 0.7);
 }
 table{
-  
     width: 900px;    
     margin: auto;
     margin-top: 30px;
-    border-spacing:0 15px; 
-    
+    border-spacing:0 15px;  
     padding: 20px;
-    
-    
- 
 }
 .overflowtable{
     overflow-x: auto;

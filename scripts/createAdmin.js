@@ -36,14 +36,10 @@ form.addEventListener('submit', (e)=>{
          return response.json()
         })
         .then((data) => {
-          
-          if (data.success) {
+          console.log(data)
+          if (data.success){
             document.getElementById('subit').disabled = false;
-
             document.getElementById('subit').textContent='done'
-
-
-           
             myFunction()
           }
           else{
@@ -51,7 +47,7 @@ form.addEventListener('submit', (e)=>{
             suc.style.textAlign = 'center'
             suc.style.margin="10px 0"
             suc.textContent= data.message
-            myFunction()
+            // myFunction()
           }
           
         

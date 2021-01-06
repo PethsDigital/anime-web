@@ -13,7 +13,7 @@
     <title>Anime</title>
     <link rel="stylesheet" href="styles/list.css">
     <link rel="stylesheet" href="styles/admin.css">
-    <link rel="stylesheet" href="styles/select.css">
+    <link rel="stylesheet" href="styles/adminlist.css">
     <link rel="stylesheet" href="styles/loader.css">
 </head>
 <body>
@@ -69,19 +69,20 @@
                     </a>
                 </div>
 
-                <div class="project srd active">
+                <div class="project srd">
                     <a href="animeList.html" class="project">
                         
                         <p class="txt">Anime List</p>
                     </a>
                 </div>
 
-                <div class="project srd">
+                <div class="project srd active">
                     <a href="adminlist.html" class="project">
                         
                         <p class="txt">Admin List</p>
                     </a>
                 </div>
+
 
                 <div class="project srd">
                     <a href="addadmin.html" class="project">
@@ -96,6 +97,7 @@
                         <p class="txt">Add Anime</p>
                     </a>
                 </div>
+
 
                 
 
@@ -117,10 +119,7 @@
                     <p>Question List</p>
                     <form class="formsearcho" action="">
                         
-                        <select class="searf" type="text" name="searcherr" placeholder="Search">
-                            <option value="">Select Category</option>
-                        </select>
-                        <input type="submit" hidden>
+                      <button class="addadmin">Add Admin</button>
                     </form>
                 </div>
                 <div class="overflowtable flipped"  >
@@ -130,10 +129,9 @@
 
                             <tr class="studhead">
                                 <th>S/N</th>
-                                <th>Anime</th>
-                                <th>Questions</th>
-                                <th>Edit</th>
-                                <th>Delete</th>
+                                <th>Name</th>
+                                <th>Email</th>
+                                
                             </tr>
 
                         </thead>
@@ -157,7 +155,7 @@
 
                 </div>
 
-               
+<!--                
                 <div class="percen">
                     <div class="flez">
                         <p class="sel">Select Page</p>
@@ -169,7 +167,7 @@
                     </div>
                     
                 </div>
-                
+                 -->
 
 
             </div>
@@ -184,8 +182,7 @@
 
     <script src="scripts/nav.js"></script>  
     <script src="scripts/token.js"></script>
-    <script src="scripts/searchAnime.js"></script>
-    <script src="scripts/animeList.js"></script>
+    <script src="scripts/adminlist.js"></script>
     <script src="scripts/loader.js"></script>
     <script src="scripts/cleartoken.js"></script>
     

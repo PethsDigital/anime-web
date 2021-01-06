@@ -1,0 +1,13 @@
+.addadmin{
+width: 100px;
+padding: 8px 0;
+background: #4E37B2;
+box-sizing: border-box;
+border-radius: 5px;
+color: white;
+cursor: pointer;
+border: transparent;
+}
+.addadmin:focus{
+outline: none;
+}

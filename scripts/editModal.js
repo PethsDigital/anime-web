@@ -34,6 +34,35 @@ let form = document.querySelector('form')
 form.addEventListener('submit',(e)=>{
     e.preventDefault()
     let option = [form.correct.value,form.Incorrect1.value,form.Incorrect2.value,form.Incorrect3.value]
+    let correctOption = form.correct.value
+    var shuffle = function (array) {
+
+      var currentIndex = array.length;
+      var temporaryValue, randomIndex;
+    
+      // While there remain elements to shuffle...
+      while (0 !== currentIndex) {
+        // Pick a remaining element...
+        randomIndex = Math.floor(Math.random() * currentIndex);
+        currentIndex -= 1;
+    
+        // And swap it with the current element.
+        temporaryValue = array[currentIndex];
+        array[currentIndex] = array[randomIndex];
+        array[randomIndex] = temporaryValue;
+      }
+    
+      return array;
+    
+    };
+  
+    // Create a new, shuffled array from lunch
+    var shuffledOption = shuffle(option.slice());
+  
+    let index2 = shuffledOption.indexOf(correctOption)
+
+
+
     let button = document.querySelector('#subit')
     button.textContent = 'Editing ...'
     button.disabled = true;
@@ -42,7 +71,7 @@ form.addEventListener('submit',(e)=>{
       const  raw = {
         "question": form.question.value,
         "options" : option,
-        "correctOptionIndex":0
+        "correctOptionIndex":index2
     }
       console.log(JSON.stringify(raw),)
       var requestOptions = {

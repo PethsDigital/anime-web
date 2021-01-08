@@ -9,21 +9,38 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css" integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Playfair+Display&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
-    <link rel="shortcut icon" href="image/attack3.jpg" type="image/x-icon">
+    
+    <link rel="shortcut icon" href="../image/attack3.jpg" type="image/x-icon">
     <title>Anime</title>
-    <link rel="stylesheet" href="styles/list.css">
-    <link rel="stylesheet" href="styles/admin.css">
-    <link rel="stylesheet" href="styles/select.css">
-    <link rel="stylesheet" href="styles/loader.css">
+    <link rel="stylesheet" href="../styles/list.css">
+    <link rel="stylesheet" href="../styles/admin.css">
+    <link rel="stylesheet" href="../styles/select.css">
+    <link rel="stylesheet" href="../styles/login.css" />
+    <link rel="stylesheet" href="../styles/loader.css">
+   <style>
+      
+       .second{
+        display: grid;
+        height: 100%;
+        width: 100%;
+        place-items: center;
+        background: #f2f2f2;
+       }
+       @media (max-width: 400px) {
+           .wrapper{
+               width: 90%;
+           }
+       }
+   </style>
+    
 </head>
 <body>
-    <div class="spinnerContainer">
-        <div class="spinner">
-            <div></div>
-            <div></div>
-        </div> 
-    </div>
-    
+
+    <div class="spinner">
+        <div></div>
+        <div></div>
+    </div> 
+
     <nav>
 
         <div class="nav">
@@ -56,7 +73,7 @@
 
 
                 <div class="project srd">
-                    <a href="questions.html" class="project">
+                    <a href="index.html" class="project">
                         
                         <p style="text-align: center;" class="txt">Question List</p>
                     </a>
@@ -69,7 +86,7 @@
                     </a>
                 </div>
 
-                <div class="project srd active">
+                <div class="project srd">
                     <a href="animeList.html" class="project">
                         
                         <p class="txt">Anime List</p>
@@ -89,17 +106,14 @@
                         <p class="txt">Add Admin</p>
                     </a>
                 </div>
-
-                <div class="project srd">
+               
+                <div class="project srd active">
                     <a href="addAnime.html" class="project">
                         
                         <p class="txt">Add Anime</p>
                     </a>
                 </div>
 
-                
-
-                
 
                 
 
@@ -112,66 +126,31 @@
         
         <section class="second">
 
-            <div class="containerover">
-                <div class="pagename">
-                    <p>Question List</p>
-                    <form class="formsearcho" action="">
-                        
-                        <select class="searf" type="text" name="searcherr" placeholder="Search">
-                            <option value="">Select Category</option>
-                        </select>
-                        <input type="submit" hidden>
-                    </form>
-                </div>
-                <div class="overflowtable flipped"  >
+            <div style="margin-top: 60px;" class="wrapper">
+             
+                <form id="addForm" action="#">
 
-                    <table>
-                        <thead>
-
-                            <tr class="studhead">
-                                <th>S/N</th>
-                                <th>Anime</th>
-                                <th>Questions</th>
-                                <th>Edit</th>
-                                <th>Delete</th>
-                            </tr>
-
-                        </thead>
-                        
-                        <tbody>
-
-                         
-         
+                  <div class="field2">
+                    <label>Anime Name</label>
+                    <input name="anime" type="text"  />
+                 
+                  </div>
+                  <div class="field2">
+                    <label>Background Image</label>
+                    <input id="imaga" name="" type="file" />
+                   
+                  </div>
+                  <div class="field2">
+                    <label>Cover photo</label>
+                    <input id="imaga2" name="" type="file"/>
         
-    
-                        
-
-                        </tbody>
-    
-                      
-    
-                        
-                    </table>
-
-                    
-
-                </div>
-
+                  </div>
+                  <p class="success"></p>
+                  <div class="field">
+                    <input id="subit" class="subit" type="submit" value="Add" />
+                  </div>
                
-                <div class="percen">
-                    <div class="flez">
-                        <p class="sel">Select Page</p>
-                        <select class="selector" name="page" id="page">
-                           
-                    
-                        </select>
-
-                    </div>
-                    
-                </div>
-                
-
-
+                </form>
             </div>
               
         </section>
@@ -182,12 +161,12 @@
 
 
 
-    <script src="scripts/nav.js"></script>  
-    <script src="scripts/token.js"></script>
-    <script src="scripts/searchAnime.js"></script>
-    <script src="scripts/animeList.js"></script>
-    <script src="scripts/loader.js"></script>
-    <script src="scripts/cleartoken.js"></script>
+
+    <script src="../scripts/nav.js"></script> 
+    <script src="../scripts/token.js"></script>
+    <script src="../scripts/addanime.js"></script>
+    <script src="../scripts/loader.js"></script>
+    <script src="../scripts/cleartoken.js"></script>
     
 </body>
 </html>

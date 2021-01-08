@@ -9,21 +9,24 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css" integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Playfair+Display&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
-    <link rel="shortcut icon" href="image/attack3.jpg" type="image/x-icon">
+    
+    <link rel="shortcut icon" href="../image/attack3.jpg" type="image/x-icon">
     <title>Anime</title>
-    <link rel="stylesheet" href="styles/list.css">
-    <link rel="stylesheet" href="styles/admin.css">
-    <link rel="stylesheet" href="styles/adminlist.css">
-    <link rel="stylesheet" href="styles/loader.css">
+    <link rel="stylesheet" href="../styles/list.css">
+    <link rel="stylesheet" href="../styles/admin.css">
+    <link rel="stylesheet" href="../styles/select.css">
+    <link rel="stylesheet" href="../styles/loader.css">
+   
+    
 </head>
 <body>
-    <div class="spinnerContainer">
-        <div class="spinner">
-            <div></div>
-            <div></div>
-        </div> 
+
+    <div class="spinner">
+        <div></div>
+        <div></div>
     </div>
-    
+
+
     <nav>
 
         <div class="nav">
@@ -56,18 +59,20 @@
 
 
                 <div class="project srd">
-                    <a href="questions.html" class="project">
+                    <a href="index.html" class="project">
                         
                         <p style="text-align: center;" class="txt">Question List</p>
                     </a>
                 </div>
 
-                <div class="project srd">
+                <div class="project srd  active">
                     <a href="flagged.html" class="project">
                         
                         <p class="txt">Flagged Questions</p>
                     </a>
                 </div>
+
+                
 
                 <div class="project srd">
                     <a href="animeList.html" class="project">
@@ -76,13 +81,12 @@
                     </a>
                 </div>
 
-                <div class="project srd active">
+                <div class="project srd">
                     <a href="adminlist.html" class="project">
                         
                         <p class="txt">Admin List</p>
                     </a>
                 </div>
-
 
                 <div class="project srd">
                     <a href="addadmin.html" class="project">
@@ -98,6 +102,10 @@
                     </a>
                 </div>
 
+                
+
+                
+
 
             </div>
 
@@ -109,10 +117,12 @@
 
             <div class="containerover">
                 <div class="pagename">
-                    <p>Question List</p>
+                    <p>Flagged Questions</p>
                     <form class="formsearcho" action="">
-                        
-                      <button class="addadmin">Add Admin</button>
+                        <select class="searf" type="text" name="searcherr" placeholder="Search">
+                            <option value="">Select Category</option>
+                        </select>
+                        <input type="submit" hidden>
                     </form>
                 </div>
                 <div class="overflowtable flipped"  >
@@ -122,17 +132,19 @@
 
                             <tr class="studhead">
                                 <th>S/N</th>
-                                <th>Name</th>
-                                <th>Email</th>
-                                
+                                <th>Question</th>
+                                <th>Category</th>
+                                <th>Actions</th>
                             </tr>
 
                         </thead>
                         
                         <tbody>
 
-                         
+                      
          
+        
+    
                         
 
                         </tbody>
@@ -146,19 +158,24 @@
 
                 </div>
 
-<!--                
                 <div class="percen">
                     <div class="flez">
                         <p class="sel">Select Page</p>
                         <select class="selector" name="page" id="page">
                            
-                    
+                            <!-- <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option> -->
                         </select>
 
                     </div>
                     
                 </div>
-                 -->
+                   
+                    
+             
+                
 
 
             </div>
@@ -171,11 +188,16 @@
 
 
 
-    <script src="scripts/nav.js"></script>  
-    <script src="scripts/token.js"></script>
-    <script src="scripts/adminlist.js"></script>
-    <script src="scripts/loader.js"></script>
-    <script src="scripts/cleartoken.js"></script>
+
+    <script src="../scripts/nav.js"></script>  
+    <script src="../scripts/token.js"></script>
+    <script src="../scripts/searchflag.js"></script>
+    <script src="../scripts/flaggedquestionlist.js"></script>
+    <script src="../scripts/loader.js"></script>
+    <script src="../scripts/cleartoken.js"></script>
+ 
+    
+    
     
 </body>
 </html>

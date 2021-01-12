@@ -26,9 +26,9 @@ const loaderprofile = ()=>{
   const loader=(data) =>{
     console.log(data)
       let opt = document.querySelectorAll('.option')
+      console.log(opt)
       opts = Array.from(opt)
       let cor = opts.filter((opt)=>{
-  
         return data.data.correctOptionIndex == opts.indexOf(opt)
       })
       cor[0].style.background='rgb(143, 240, 143)'

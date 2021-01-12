@@ -34,7 +34,9 @@ let form = document.querySelector('form')
 form.addEventListener('submit',(e)=>{
     e.preventDefault()
     let option = [form.correct.value,form.incorrect1.value,form.incorrect2.value,form.incorrect3.value]
+    console.log(option,'option')
     let correctOption = form.correct.value
+    console.log(correctOption)
     
     var shuffle = function (array) {
 
@@ -59,8 +61,9 @@ form.addEventListener('submit',(e)=>{
   
     // Create a new, shuffled array from lunch
     var shuffledOption = shuffle(option.slice());
+    console.log(shuffledOption,'shuffle')
     let index2 = shuffledOption.indexOf(correctOption)
- 
+    console.log(index2,'index correct')
     let button = document.querySelector('button')
     button.textContent = 'Addind ...'
     button.disabled = true;
@@ -68,7 +71,7 @@ form.addEventListener('submit',(e)=>{
   
       const  raw = {
         "question": form.question.value,
-        "options" : option,
+        "options" : shuffledOption,
         "correctOptionIndex": index2
     }
       console.log(JSON.stringify(raw),)
@@ -88,7 +91,7 @@ form.addEventListener('submit',(e)=>{
             
           
             button.textContent = 'Added Successfully'
-            myFunction()
+            // myFunction()
           
         })
         .catch(error => console.log('error', error));

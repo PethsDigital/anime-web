@@ -70,7 +70,7 @@ form.addEventListener('submit',(e)=>{
   
       const  raw = {
         "question": form.question.value,
-        "options" : option,
+        "options" : shuffledOption,
         "correctOptionIndex":index2
     }
       console.log(JSON.stringify(raw),)

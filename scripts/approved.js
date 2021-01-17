@@ -1,11 +1,26 @@
-let select = document.querySelector('.selector')
-let page = 1
-let limit = 2
-select.addEventListener('change',()=>{
-  console.log(select.value)
-  page = select.value
-  loaderprofile(page)
-})
+// let select = document.querySelector('.selector')
+// let page = 1
+// let limit = 2
+// select.addEventListener('change',()=>{
+//   console.log(select.value)
+//   page = select.value
+//   loaderprofile(page)
+// })
+
+const searchFill = ()=>{
+   
+    fetch("https://kuizuapp.herokuapp.com/v1//animes")
+      .then(response => response.json())
+      .then(result => {             
+       console.log(result)
+        loaderprofile(result.data)
+    })
+      .catch(error => console.log('error', error));
+
+    
+    
+}
+searchFill()
 
 let fillselect = (page)=>{
   
@@ -21,8 +36,8 @@ let fillselect = (page)=>{
 }
 
   let tbody = document.querySelector('tbody')
-  const loaderprofile = (page)=>{
-
+  const loaderprofile = (data)=>{
+  console.log(data)
     var requestOptions = {
       method: 'GET',
       headers: {
@@ -32,11 +47,11 @@ let fillselect = (page)=>{
       redirect: 'follow'
     };
     
-    fetch(`https://kuizuapp.herokuapp.com/v1/questions/page/${page}`, requestOptions)
+    fetch(`https://kuizuapp.herokuapp.com/v1//questions/anime/${data[2]._id}/approved`, requestOptions)
       .then(response => response.json())
       .then(result => {
-      
-        loader(result)
+        console.log(result)
+        // loader(result)
      
       })
       .catch(error => console.log('error', error));
@@ -45,13 +60,7 @@ let fillselect = (page)=>{
  
       fillselect(data.data.noofPages)
       tbody.innerHTML = "";
-        let eachdata2 = data.data.questions
-        console.log(eachdata2)
-        let eachdata = eachdata2.filter((item)=>{
-          return !item.is_approved
-        })
-        console.log(eachdata)
-
+        let eachdata = data.data.questions
       
         
         for (let i = 0; i < eachdata.length; i++) {
@@ -77,7 +86,6 @@ let fillselect = (page)=>{
 }
 
 
-loaderprofile(page)
 
 
 
